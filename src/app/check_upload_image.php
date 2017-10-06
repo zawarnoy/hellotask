@@ -21,6 +21,8 @@ function check_file_format()
 
 function create_folder_by_id()
 {
+	if(!file_exists("../../cache/"))
+		mkdir("../../cache/");
 	$id = $_POST['id'];
 	if(!file_exists("../../cache/".$_POST['id']))
 		mkdir("../../cache/".$_POST['id']);
